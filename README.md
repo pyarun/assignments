@@ -18,3 +18,4 @@ Work Assignements for Divya
 ` git push origin <branch>`  
   Where branch is the current branch. Check the current branch by `git branch`    
 
++ Eclipse/Aptana users can install the git plugin for graphical UI.  
