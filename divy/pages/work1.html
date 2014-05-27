@@ -4,47 +4,66 @@
    <title>Try Bootstrap Online</title>
    <!-- Bootstrap-->
    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link href="../myLIB/myCSS/Style.css" rel="stylesheet">
+   <style>
+      .center{text-align: center}
+      .border{border:1px solid black;}
+      .margin{margin:10px 5px 10px 5px;}
+      .bckgnd-blue{background-color:#28A4C9}
+      .bckgnd-red{background-color:#D9534F}
+      .bckgnd-yellow{background-color:yellow}
+      .bckgnd-green{background-color:green}
+      .margin1{margin:5px 0px 5px 10px;}
+      .padding-left: {padding-left: 10px}
+      .padding-right: {padding-right: 10px}
+      .padding-top: {padding-top: 10px}
+      .padding-bottom: {padding-bottom: 10px}
+   </style>
 </head>
 <body>
+   <!--banner container -->
+   <header class="container-fluid border margin center">
+      <h1>Banner</h1>
+   </header>
 
-   <div class="container">
-      <div class="row"  style="background-color: #dedef8;">Box for Page Header
+   <!-- main content container -->
+   <div class="container padding">
+      <div class="row border">
+         <div class="col-md-12"></div>
       </div>
-      <br><hr><br>
-
 
       <div class="row">
-         <div class="col-md-4" style="background-color: #dedef8;">
-            <p>Left Content</p>
-            <div class="row">BOX for Search field
+         <div class="col-md-4 border">
+            
+            <div class="row bckgnd-red">
                <div class="col-md-12">
                   <h4>Search field</h4>
                </div>
             </div>
-            <div class="row">BOX for INFO
+            <div class="row bckgnd-blue">
                <div class="col-md-12">
                   <h4>Info Here</h4>
                </div>
             </div>
-            <div class="row">BOX for CALENDAR
+            <div class="row bckgnd-red">
                <div class="col-md-12">
                   <h4>Calendar here</h4>
                </div>
             </div>
-            <div class="row">BOX for RED LABEL
+            <div class="row bckgnd-blue">
                <div class="col-md-12">
                   <h4>Label in REd Color</h4>
                </div>
             </div>
-            <div class="row">BOX for MUSIC OPTIONS
+            <div class="row bckgnd-red">
                <div class="col-md-12">
-                  <h4>Music CheckBoxs</h4>
-                  
+                  <h4>Music CheckBoxs</h4>   
                </div>
             </div>
-            <div class="row">BOX for RATING
+            <div class="row bckgnd-blue">
                <div class="col-md-12">
                   <h4>What is User's Rating </h4>
+                  
                   <div class="checkbox">
                      <label><input type="checkbox" value="">5 stars</label>
                   </div>
@@ -63,50 +82,50 @@
                   
                </div>
             </div>
-            <div class="row">BOX for Google MAP
+            <div class="row bckgnd-red">
                <div class="col-md-12">
                   <h4>map from google</h4>
                </div>
             </div>
-            <div class="row">BOX for Social WEB
+            <div class="row bckgnd-blue">
                <div class="col-md-12">
                   <h4>social web icons for fb....</h4>
                </div>
             </div>
          </div>
 
-         <div class="col-md-8" style="background-color: #dedef8;">
+         <div class="col-md-8 border">
             <p>Right Content</p>
-            <div class="row">BOX for CHOOSE DAY OF THE WEEK
+            <div class="row bckgnd-yellow">
                <div class="col-md-12">
                   <h4>CHOOSE DAY OF THE WEEK comes here</h4>
                </div>
             </div>
 
-            <div class="row">BOX for SHPAGAT and IMG
+            <div class="row bckgnd-green">
                <div class="col-md-3">
                   <img src="" >
                </div>
                <div class="col-md-9"> 
-                  <div class="row">SHPAGAT content 1</div>
+                  <div class="row bckgnd-blue">SHPAGAT content 1</div>
                   <hr>
-                  <div class="row">SHPAGAT content 2</div>
+                  <div class="row bckgnd-red">SHPAGAT content 2</div>
                </div>
             </div>
 
-            <div class="row">BOX for DRECK and IMG
-               <div class="row">
+            <div class="row bckgnd-yellow">
+               <div class="row bckgnd-red">
                   <div class="col-md-3">
                      <img src="">
                   </div>
                   <div class="col-md-9">
-                     <div class="row">DRECK content 1</div>
+                     <div class="row bckgnd-blue">DRECK content 1</div>
                      <hr>
-                     <div class="row">DRECK content 2</div>
+                     <div class="row bckgnd-red">DRECK content 2</div>
                   </div>
                </div>
                <hr>
-               <div class="row">
+               <div class="row bckgnd-blue">
                   <div class="col-md-4">
                      <div class="row">WHO IS COMING?</div>
                      <div class="row">12 SMALL img</div>
@@ -180,6 +199,10 @@
       </div>
       
    </div>
+
+   <footer class="row">
+     <p>&copy; Copyright  by divy</p>
+   </footer>
    <!-- Javascript-->
    <script src="../lib/jquery/jquery-2.1.1.min.js"></script>
    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
