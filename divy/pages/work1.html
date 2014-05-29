@@ -7,17 +7,24 @@
    <link href="../myLIB/myCSS/Style.css" rel="stylesheet">
    <style>
       .center{text-align: center}
-      .border{border:1px solid black;}
-      .margin{margin:10px 5px 10px 5px;}
+      .border{border:1px solid black}
       .bckgnd-blue{background-color:#28A4C9}
       .bckgnd-red{background-color:#D9534F}
       .bckgnd-yellow{background-color:yellow}
       .bckgnd-green{background-color:green}
-      .margin1{margin:5px 0px 5px 10px;}
+      .padding{padding: 10px}
       .padding-left: {padding-left: 10px}
       .padding-right: {padding-right: 10px}
       .padding-top: {padding-top: 10px}
       .padding-bottom: {padding-bottom: 10px}
+      .margin{margin:10px}
+      .margin5{margin:5px}
+      .marginIMG{margin:5px}
+      .marginTHUMB{margin:3px}
+      .margin-left: {margin-left: 10px}
+      .margin-right: {margin-right: 10px}
+      .margin-top: {margin-top: 10px}
+      .margin-bottom: {margin-bottom: 10px}
    </style>
 </head>
 <body>
@@ -27,17 +34,23 @@
    </header>
 
    <!-- main content container -->
-   <div class="container padding">
+   <div class="container">
+
       <div class="row border">
          <div class="col-md-12"></div>
       </div>
 
-      <div class="row">
-         <div class="col-md-4 border">
+      <div class="row border">
+         <div class="col-md-4 border margin">
             
             <div class="row bckgnd-red">
                <div class="col-md-12">
-                  <h4>Search field</h4>
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for a party...">
+                    <span class="input-group-addon">
+                       <span class="glyphicon glyphicon-search"></span>
+                    </span>
+                  </div>
                </div>
             </div>
             <div class="row bckgnd-blue">
@@ -65,19 +78,39 @@
                   <h4>What is User's Rating </h4>
                   
                   <div class="checkbox">
-                     <label><input type="checkbox" value="">5 stars</label>
+                     <label><input type="checkbox" value="">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                     </label>
                   </div>
                   <div class="checkbox">
-                     <label><input type="checkbox" value="">4 stars</label>
+                     <label><input type="checkbox" value="">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                     </label>
                   </div>
                   <div class="checkbox">
-                     <label><input type="checkbox" value="">3 stars</label>
+                     <label><input type="checkbox" value="">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                     </label>
                   </div>
                   <div class="checkbox">
-                     <label><input type="checkbox" value="">2 stars</label>
+                     <label><input type="checkbox" value="">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                     </label>
                   </div>
                   <div class="checkbox">
-                     <label><input type="checkbox" value="">1 stars</label>
+                     <label><input type="checkbox" value="">
+                        <span class="glyphicon glyphicon-star"></span>
+                     </label>
                   </div>
                   
                </div>
@@ -94,106 +127,198 @@
             </div>
          </div>
 
-         <div class="col-md-8 border">
-            <p>Right Content</p>
-            <div class="row bckgnd-yellow">
-               <div class="col-md-12">
+         <div class="col-md-7 border margin">
+            <div class="row bckgnd-yellow ">
+               <div class="col-md-12 center">
                   <h4>CHOOSE DAY OF THE WEEK comes here</h4>
                </div>
             </div>
 
+            <hr>
+
             <div class="row bckgnd-green">
-               <div class="col-md-3">
-                  <img src="" >
+               <div class="col-md-2 marginIMG">
+                  <img src="../IMG/80x80.png" class="img-responsive">
                </div>
-               <div class="col-md-9"> 
-                  <div class="row bckgnd-blue">SHPAGAT content 1</div>
+               <div class="col-md-9 margin"> 
+                  <div class="row bckgnd-blue">
+                     SHPAGAT
+                  </div>
                   <hr>
-                  <div class="row bckgnd-red">SHPAGAT content 2</div>
+                  <div class="row bckgnd-red">
+                     Warn and elegantly designed LGBT bar near Rothschild near Avant-garde <br>
+                     beats and intimate live shows.
+                  </div>
                </div>
             </div>
 
             <div class="row bckgnd-yellow">
-               <div class="row bckgnd-red">
-                  <div class="col-md-3">
-                     <img src="">
-                  </div>
-                  <div class="col-md-9">
-                     <div class="row bckgnd-blue">DRECK content 1</div>
-                     <hr>
-                     <div class="row bckgnd-red">DRECK content 2</div>
-                  </div>
+               <div class="col-md-2 marginIMG">
+                     <img src="../IMG/80x80.png" class="img-responsive">
                </div>
-               <hr>
-               <div class="row bckgnd-blue">
-                  <div class="col-md-4">
-                     <div class="row">WHO IS COMING?</div>
-                     <div class="row">12 SMALL img</div>
-                     <button class="btn btn-primary btn-lg" type="submit">Event</button>  
+               <div class="col-md-9 margin">
+                  <div class="row bckgnd-blue">
+                     DRECK
                   </div>
-                  <div class="col-md-4">
-                     <div class="row">BUY A TICKET AREA</div>
-                     <hr>
-                     <div class="row">MAP AREA</div>
-                     <button class="btn btn-warning btn-lg" type="submit">Get A TAXI</button>
-                  </div>
-                  <div class="col-md-4">
-                     <dl>
-                       <dt>Door Open</dt>
-                       <dd>10:30 PM, jan 11</dd>
-                       <dt>Zamir Club</dt>
-                       <dd>Allenby 34, Tel Aviv</dd>
-                       <dt>Crowd</dt>
-                       <dd>18+ Gay-friendly</dd>
-                       <dt>Price</dt>
-                       <dd>60 NIS</dd>
-                       <dt>Live Show</dt>
-                       <dd>Maya Buskila</dd>
-                       <dt>Drag Show</dt>
-                       <dd>Talula Bonet</dd>
-                     </dl>
-                     <button class="btn btn-danger btn-lg" type="submit">Win a Drink</button>
-                  </div>
-               </div>
-               <hr>
-               <div id="myCarousel" class="carousel slide">
-                  
-                  <ol class="carousel-indicators">
-                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                     <li data-target="#myCarousel" data-slide-to="1"></li>
-                     <li data-target="#myCarousel" data-slide-to="2"></li>
-                  </ol>   
-                  
-                  <div class="carousel-inner">
-                     <div class="item active">
-                        <img src="mj.jpg" alt="First slide">
-                     </div>
-                     <div class="item">
-                        <img src="mj.jpg" alt="Second slide">
-                     </div>
-                     <div class="item">
-                        <img src="mj.jpg" alt="Third slide">
-                     </div>
-                  </div>
-                 
-                  <a class="carousel-control left" href="#myCarousel" 
-                     data-slide="prev">&lsaquo;</a>
-                  <a class="carousel-control right" href="#myCarousel" 
-                     data-slide="next">&rsaquo;</a>
-               </div>               
-            </div>
-            
-            <div class="row">BOX for Glitter
-               <div class="col-md-3">
-                  <img src="" >
-               </div>
-               <div class="col-md-9"> 
-                  <div class="row">Glitter content 1</div>
                   <hr>
-                  <div class="row">Glitter content 2</div>
+                  <div class="row bckgnd-red">
+                     A sophisticated and hot electro pop party by Imri Kalman and Osher Sabag. <br>
+                     Without a doubt the best way to celebrate the weekend with a beautiful crowd and cool beats.
+                  </div>
                </div>
             </div>
-            <div class="row"></div>
+               
+            <hr>
+
+            <div class="row bckgnd-blue">
+               <div class="col-md-3 margin5">
+                  <div class="row">WHO IS COMING?</div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img src="../IMG/35x35.png" alt="..." class="img-responsive marginTHUMB">
+                    </div>
+                    <div class="col-md-4">
+                      <img src="../IMG/35x35.png" alt="..." class="img-responsive marginTHUMB">
+                    </div>
+                    <div class="col-md-4">
+                      <img src="../IMG/35x35.png" alt="..." class="img-responsive marginTHUMB">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img src="../IMG/35x35.png" alt="..." class="img-responsive marginTHUMB">
+                    </div>
+                    <div class="col-md-4">
+                      <img src="../IMG/35x35.png" alt="..." class="img-responsive marginTHUMB">
+                    </div>
+                    <div class="col-md-4">
+                      <img src="../IMG/35x35.png" alt="..." class="img-responsive marginTHUMB">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img src="../IMG/35x35.png" alt="..." class="img-responsive marginTHUMB">
+                    </div>
+                    <div class="col-md-4">
+                      <img src="../IMG/35x35.png" alt="..." class="img-responsive marginTHUMB">
+                    </div>
+                    <div class="col-md-4">
+                      <img src="../IMG/35x35.png" alt="..." class="img-responsive marginTHUMB">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img src="../IMG/35x35.png" alt="..." class="img-responsive marginTHUMB">
+                    </div>
+                    <div class="col-md-4">
+                      <img src="../IMG/35x35.png" alt="..." class="img-responsive marginTHUMB">
+                    </div>
+                    <div class="col-md-4">
+                      <img src="../IMG/35x35.png" alt="..." class="img-responsive marginTHUMB">
+                    </div>
+                  </div>
+
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-primary btn-lg">Event</button>
+                    
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary btn-lg">
+                        FB
+                      </button>
+                     </div>
+                  </div>
+                  
+                    
+               </div>
+
+               <div class="col-md-4 margin5">
+                  <div class="row">BUY A TICKET AREA</div>
+                  <hr>
+                  <div class="row">MAP AREA</div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-warning btn-lg">Get A TAXI</button>
+                    
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-warning btn-lg">
+                        FB
+                      </button>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="col-md-4 margin5">
+                  <dl>
+                    <dt>Door Open</dt>
+                    <dd>10:30 PM, jan 11</dd>
+                    <dt>Zamir Club</dt>
+                    <dd>Allenby 34, Tel Aviv</dd>
+                    <dt>Crowd</dt>
+                    <dd>18+ Gay-friendly</dd>
+                    <dt>Price</dt>
+                    <dd>60 NIS</dd>
+                    <dt>Live Show</dt>
+                    <dd>Maya Buskila</dd>
+                    <dt>Drag Show</dt>
+                    <dd>Talula Bonet</dd>
+                  </dl>
+                  <div class="btn-group">
+                    <button class="btn btn-danger btn-lg" type="submit">Win a Drink</button>
+                    
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-danger btn-lg">
+                        FB
+                      </button>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+
+            <hr>
+            
+            <div id="myCarousel" class="carousel slide">
+               
+               <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+               </ol>   
+               
+               <div class="carousel-inner">
+                  <div class="item active">
+                     <img src="mj.jpg" alt="First slide">
+                  </div>
+                  <div class="item">
+                     <img src="mj.jpg" alt="Second slide">
+                  </div>
+                  <div class="item">
+                     <img src="mj.jpg" alt="Third slide">
+                  </div>
+               </div>
+              
+               <a class="carousel-control left" href="#myCarousel" 
+                  data-slide="prev">&lsaquo;</a>
+               <a class="carousel-control right" href="#myCarousel" 
+                  data-slide="next">&rsaquo;</a>
+            </div>               
+            <hr>
+            
+            <div class="row bckgnd-green">
+               <div class="col-md-2 marginIMG">
+                  <img src="../IMG/80x80.png" class="img-responsive">
+               </div>
+               <div class="col-md-9 margin"> 
+                  <div class="row bckgnd-blue">
+                     Glitter
+                  </div>
+                  <hr>
+                  <div class="row bckgnd-red">
+                     Every Saturday at the Evita Bar, starring drag queen Zona Pariot, with happy <br>
+                     music! Producer Daniel Kazengold will make sure you'll never forget it, with <br>
+                     lots of fun an special treats!
+                  </div>
+               </div>
+            </div>
 
          </div>
       </div>
