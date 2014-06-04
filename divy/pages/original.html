@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app='tlvsceneApp'>
+<head>
+<meta charset="utf-8">
+
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>TLV Scene - Upcoming parties</title>
+<meta name="description" content="">
+
+<!-- <meta name="viewport" content="width=device-width; initial-scale=1.0"> -->
+
+<link rel="shortcut icon" href="/static/vt/img/favicon.png">
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,800,700' rel='stylesheet'
+   type='text/css'>
+<!-- Bootstap CSS -->
+<link href="../myLIB/myCSS/xxx.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+<body>
+   <div id="body" ng-init="fbAccessToken='287600531258509|6Y7z02yK9p1fmCTp40q9L2NcwS0'">
+      <header>
+         <div id="header">
+            <div class="container">
+               <div id="header-contents">
+                  <div class="col-lg-3 big-logo"></div>
+                  <div id="header-text-area" class="col-lg-7">
+                     <span id="head-txt" class="text-white">EXPLORE THE </span><br /> <span
+                        id="head-txt-bold" class="text-white ">GAY NIGHTLIFE <br />OF
+                        TEL-AVIV!
+                     </span>
+                  </div>
+                  <div id="header-right-part" class="col-lg-2 pull-right">
+                     <p id="app-txt-area" class="text-center text-white">
+                        <b>Free App!</b> <br /> Available on <br />
+                     </p>
+                     <div class="center-block">
+                        <a target="_blank"
+                           href="https://itunes.apple.com/us/app/tlv-scene/id513250754?mt=8">
+                           <div class="apple "></div>
+                        </a> <a target="_blank"
+                           href="https://play.google.com/store/apps/details?id=il.co.tlvscene.android">
+                           <div class="android "></div>
+                        </a>
+                        <div class="clearfix"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div id="header2" header-slider>
+            <!-- Fixed navbar -->
+            <div
+               class="navbar navbar-default navbar-fixed-top header2-image hide-header-initially stuff-to-show"
+               role="navigation" ng-show="showSmallHeader">
+               <div class="container">
+                  <div id="header-contents-small">
+                     <div class="col-lg-2 small-logo"></div>
+                     <div id="header-text-area" class="col-lg-8 text-center">
+                        <span class="crown"></span> <span id="head-txt-small" class="">Get
+                           your VIP Nightlife Pass</span>
+                     </div>
+                     <div class="col-lg-2 pull-right">
+                        <div class="center-block">
+                           <a target="_blank"
+                              href="https://itunes.apple.com/us/app/tlv-scene/id513250754?mt=8">
+                              <span class="apple "></span>
+                           </a> <a target="_blank"
+                              href="https://play.google.com/store/apps/details?id=il.co.tlvscene.android">
+                              <span class="android "></span>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+
+
+
+
+      <div id="main-content-area" class="container">
+         <div class="row" ng-controller="PartyListCtrl">
+
+
+
+
+            <div id="alert-box">
+               <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+            </div>
+
+
+
+
+            <div class="col-lg-3">
+
+
+
+               <!--search bar-->
+               <div class="row">
+                  <div class="col-xs-12">
+
+                     <div class="form-group has-success has-feedback" id="search-area">
+
+                        <input type="text" class="form-control" ng-model="searchText"
+                           ng-change="Partylisting.addKeywordToSearch();" type="text"
+                           placeholder="Search for a party..." id="search-field"> <span
+                           class="glyphicon search form-control-feedback"></span>
+
+                     </div>
+
+                  </div>
+               </div>
+
+               <!--user face bar-->
+               <div class="row">
+                  <div class="col-xs-12">
+                     <div fb-login data-fbloginurl="'/service/v2/login'"></div>
+                  </div>
+               </div>
+               <!--calender area-->
+               <div class="row">
+                  <div class="col-xs-12" id="calender-area">
+                     <div class="panel panel-default">
+                        <div class="panel-body">
+                           <ng-include src="'/static/vt/js/ngapp/tmplts/datepicker.html'"></ng-include>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!--type of Event-->
+               <div class="row" id="genre-panel">
+                  <div class="col-xs-12">
+
+
+                     <div class="panel panel-default panel-tlv-default" id="prt-choices-area">
+                        <div class="panel-heading">
+                           <span class="heading-left-bar arial-normal">I am looking for</span>
+                        </div>
+                        <div class="panel-body">
+                           <div class="row">
+                              <div class="col-xs-12">
+
+                                 <ul class="list-unstyled">
+
+                                    <li><input type="checkbox" name="1" value="1"
+                                       ng-click="Partylisting.addEventTypeToSearch($event)" /> <label
+                                       class="view-label">Night Life</label></li>
+
+                                    <li><input type="checkbox" name="2" value="2"
+                                       ng-click="Partylisting.addEventTypeToSearch($event)" /> <label
+                                       class="view-label">Tourism</label></li>
+
+                                    <li><input type="checkbox" name="3" value="3"
+                                       ng-click="Partylisting.addEventTypeToSearch($event)" /> <label
+                                       class="view-label">Culture</label></li>
+
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+
+               <div class="row">
+                  <div class="col-xs-12">
+                     <img src="/static/vt/img/ch-prts-icons.png" id="ch-ptrs-icns-img">
+                  </div>
+               </div>
+
+               <!--Music genre-->
+               <div class="row" id="genre-panel">
+                  <div class="col-xs-12">
+
+
+
+                     <div class="panel panel-default panel-tlv-default" id="prt-choices-area">
+                        <div class="panel-heading">
+                           <span class="heading-left-bar arial-normal">My taste in Music is</span>
+                        </div>
+                        <div class="panel-body">
+                           <div class="row">
+
+
+
+                              <div class="col-xs-6" style="padding-right: 5px;">
+
+                                 <input type="checkbox" name="Dance" value="6"
+                                    ng-click="Partylisting.addGenreToSearch($event)" /> <label
+                                    class="view-label">Dance</label>
+                              </div>
+
+
+                              <div class="col-xs-6" style="padding-left: 5px;">
+
+                                 <input type="checkbox" name="Eurovision" value="77"
+                                    ng-click="Partylisting.addGenreToSearch($event)" /> <label
+                                    class="view-label">Eurovision</label>
+                              </div>
+
+
+                              <div class="col-xs-6" style="padding-right: 5px;">
+
+                                 <input type="checkbox" name="Hip Hop" value="17"
+                                    ng-click="Partylisting.addGenreToSearch($event)" /> <label
+                                    class="view-label">Hip Hop</label>
+                              </div>
+
+
+                              <div class="col-xs-6" style="padding-left: 5px;">
+
+                                 <input type="checkbox" name="House" value="5"
+                                    ng-click="Partylisting.addGenreToSearch($event)" /> <label
+                                    class="view-label">House</label>
+                              </div>
+
+
+                              <div class="col-xs-6" style="padding-right: 5px;">
+
+                                 <input type="checkbox" name="Pop" value="1"
+                                    ng-click="Partylisting.addGenreToSearch($event)" /> <label
+                                    class="view-label">Pop</label>
+                              </div>
+
+
+                              <div class="col-xs-6" style="padding-left: 5px;">
+
+                                 <input type="checkbox" name="R&amp;B" value="73"
+                                    ng-click="Partylisting.addGenreToSearch($event)" /> <label
+                                    class="view-label">R&amp;B</label>
+                              </div>
+
+
+                              <div class="col-xs-6" style="padding-right: 5px;">
+
+                                 <input type="checkbox" name="Rock" value="13"
+                                    ng-click="Partylisting.addGenreToSearch($event)" /> <label
+                                    class="view-label">Rock</label>
+                              </div>
+
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+
+               <!-- user ratings filter -->
+               <div class="row" id="ratings-panel">
+                  <div class="col-xs-12">
+                     <ng-include src="'/static/vt/js/ngapp/tmplts/user_rating_choices.html'"></ng-include>
+                  </div>
+               </div>
+
+               <div class="row" id="static-map-area">
+                  <div class="col-xs-12">
+                     <div class="panel panel-default" id="map-area">
+                        <div class="panel-body">
+                           <google-map center="israelCityCenter" pan="true" zoom="mapoptions.zoom"
+                              dragging=false options="mapoptions"> <marker
+                              coords="israelCityCenter" icon="'/static/vt/img/map-icon.png'"></marker>
+                           </google-map>
+
+                           <div class="link-area">
+                              <div class="label label-default" ng-hide="showMapView">
+                                 <a href="" ng-click="showFullMapView();"> Go to Map View </a><i
+                                    class="glyphicon glyphicon-chevron-right"></i>
+                              </div>
+                              <div class="label label-default" ng-show="showMapView">
+                                 <a href="" ng-click="showFullListView();">Go to List View </a><i
+                                    class="glyphicon glyphicon-chevron-left"></i>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col-xs-12">
+                     <div class="panel panel-default" id="share-tool-area">
+                        <div class="panel-body">
+                           <div>
+                              <div class="fb-like-box" data-href="https://www.facebook.com/TLVScene"
+                                 data-width="141" data-height="60" data-show-faces="false"
+                                 data-header="false" data-stream="false" data-show-border="false">
+                              </div>
+                           </div>
+                           <div>
+                              <a target="_blank" href="http://followgram.me/tlvscene"><div
+                                    class="insta pull-left"></div></a> <a target="_blank"
+                                 href="https://plus.google.com/116740026989254350496/posts"><div
+                                    class="google pull-left"></div></a> <a target="_blank"
+                                 href="http://www.youtube.com/channel/UC-ePkvMcC-v0tz0gd2-IW1Q"><div
+                                    class="youtube pull-left"></div></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+
+
+            </div>
+
+
+
+            <div class="col-lg-9">
+
+
+               <div week-days Partylisting='Partylisting' today='today'></div>
+
+               <div class="row" id="party-list-area" ng-hide="showMapView"
+                  ng-init="showMapView=false;">
+                  <div class="col-xs-12" ng-include="'/static/vt/js/ngapp/tmplts/party_list.html'">
+                  </div>
+               </div>
+
+               <div class="row" id="party-map-area" ng-show="showMapView">
+                  <div class="col-xs-12" ng-include="'/static/vt/js/ngapp/tmplts/map_view.html'">
+                  </div>
+               </div>
+
+
+
+
+            </div>
+
+
+         </div>
+      </div>
+
+
+
+      <footer>
+         <div id="footer"></div>
+      </footer>
+   </div>
+
+   <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+
+   <script src="/en/jsreverse/" type="text/javascript"></script>
+
+   <script type="text/javascript" src="/static/CACHE/js/6719a3ddc39e.js"></script>
+
+
+
+
+
+
+   <script type="text/ng-template" id="loginpanel.html">
+
+<div>
+    <div class="panel panel-default" id="user-info-area" ng-show="showFBUser"> 
+      <div class="panel-body">
+        <img class="img-circle pull-left" ng-src="{{user.picture}}">
+        <span id="user-info-txt" class="text-grey"> You are connected as  </span>
+        <span id="usr-nm-txt" class="text-blue"> {{user.name}} </span>
+      </div>
+    </div>
+    
+    <div class="row" ng-show="showFBLoginButton">
+      <div class="col-xs-12">
+        <button class="btn btn-block fb-btn marg-bot-20" ng-click="fbLogin();">
+          Facebook Login
+        </button>
+      </div>
+    </div>
+    
+</div>
+
+</script>
+
+
+   <script type="text/ng-template" id="weekdays.html">
+
+
+<div class="row">
+  <div class="col-xs-12" id="weekdays-area">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <p class="text-center text-blue opn-sns-font" id="nav-heading-txt">CHOOSE A DAY OF THE WEEK</p>
+      </div>
+      <div class="panel-body">
+        <ul class="nav nav-pills " id="days-nav-bar">
+          <li class="text-center" 
+              ng-click="setActiveDate($event, day)" data-date="{{day|date:'M/d/yy'}}"
+              ng-class="{active: day.getDate() == activeDate.getDate()}" ng-repeat="day in weekdays">
+            <a href="">
+              <span class="day-txt text-black">{{day|date:"EEEE"}}</span><br>
+            <span class="date-txt text-black">{{day|date:"d MMM"}}</span></a>
+          </li>
+        </ul>
+      </div>              
+      
+    </div>
+  </div>
+</div>
+
+
+
+</script>
+
+
+
+   <script type="text/ng-template" id="fb_event.html">
+
+     
+            <div id="acc-event-area" class="col-lg-4 pdwrap">
+              <div class="row pdwrapsub" ng-if="showFBEvents">
+                <div class="col-sm-12">
+                    <h5><span class="acc-col-ttl-txt opensans-bold">WHO'S COMMING?</span></h5> 
+                </div>
+                <div class="col-sm-12">
+                   <span class="ppl-cnt-txt opensans-semibold"> {{userCount}} People | 21 Friends </span>
+                </div>
+           
+                <div class="col-sm-12 frnd-container">
+                  
+                  <div class="row" ng-repeat="usertuple in fbUsers">
+                    <div class="col-sm-12">
+                        <div class="pull-left" ng-repeat="user in usertuple">
+                          <a href="{{user.link}}" target="blank" class="thumbnail"  style="padding:4px 6px;">
+                            <img ng-src="{{user.picture.data.url}}" class="img-rounded" alt="..." />
+                          </a>
+                        </div>
+                    </div>
+                  </div>
+          
+                </div>
+              </div>
+              
+              <div class="row" ng-if="showFBEvents">
+                <div class="col-sm-12">
+                  <a id="evnt-btn" type="button" class="btn btn-primary btn-lg btn-block" target="_blank" href="{{party.event_url}}"> 
+                    <span class="opensans-normal"> Event </span> 
+                    <div class="facebook-image pull-right"></div> 
+                  </a> 
+                </div>
+              </div>
+        
+              <div class="row" ng-if="! showFBEvents" >
+                <div class="col-sm-12" style="top:135px;">
+                  <h5><span class="acc-col-ttl-txt opensans-bold">Information Not Available</span></h5> 
+                </div>
+              </div>
+        
+            </div>
+            
+</script>
+
+
+
+
+   <script type="text/ng-template" id="ratings.html">
+
+<ul class="list-inline">
+  <li ng-class="{lggreystar:setGrey(1), lggoldstar:setGold(1), hover:over>0, lgblueborderstarImp:setUserRatingStar(1)}" data-val="1" tooltip="{{party.rating.votes}}" tooltip-placement="bottom"></li>
+  <li ng-class="{lggreystar:setGrey(2), lggoldstar:setGold(2), hover:over>1, lgblueborderstarImp:setUserRatingStar(2)}" data-val="2" tooltip="{{party.rating.votes}}" tooltip-placement="bottom"></li>
+  <li ng-class="{lggreystar:setGrey(3), lggoldstar:setGold(3), hover:over>2, lgblueborderstarImp:setUserRatingStar(3)}" data-val="3" tooltip="{{party.rating.votes}}" tooltip-placement="bottom"></li>
+  <li ng-class="{lggreystar:setGrey(4), lggoldstar:setGold(4), hover:over>3, lgblueborderstarImp:setUserRatingStar(4)}" data-val="4" tooltip="{{party.rating.votes}}" tooltip-placement="bottom"></li>
+  <li ng-class="{lggreystar:setGrey(5), lggoldstar:setGold(5), hover:over>4, lgblueborderstarImp:setUserRatingStar(5)}" data-val="5" tooltip="{{party.rating.votes}}" tooltip-placement="bottom"></li>
+</ul>
+
+</script>
+
+
+
+
+   <script type="text/ng-template" id="mediaSlider.html">
+
+<div class="row party-media" ng-show="!nogallery">
+  <div class="col-xs-12">
+    <div id="med-slidr-area" class="wt_bkg">
+      <div class="panel panel-default panel-tlv-colorless">
+        <div class="panel-heading">
+          <h5><span class="acc-col-ttl-txt opensans-bold">Media & Pictures</span></h5>
+        </div>
+        <div class="panel-body" style="border-top:none;">
+          <ul class="bxslider" >
+            <li ng-repeat="pic in party.gallery.photos" ng-click="popUp($event, pic);" ><img ng-src="{{pic.url100x100}}" /></li>
+          </ul>
+        </div>    
+      </div> 
+    </div>
+  </div>
+</div>
+
+
+</script>
+
+
+   <script type="text/ng-template" id="benefitButton.html">
+
+<div class="row" ng-show="showBenefitButton">
+  <div class="col-sm-12">
+ 
+    <div class="btn btn-primary btn-lg btn-block win-drnk-btn" type="button" ng-click="availBenefit();">
+      <div class="col-sm-10"> 
+        <div class="sm-tit"> {{btn.text1}} </div>
+        <div class="sub-tit"> {{btn.text2}} </div>
+      </div>
+      <div class="drink-image pull-right"></div> 
+    </div>
+  </div>
+</div>
+
+</script>
+   <script src="/static/vt/libs/jquery.bxslider/jquery.bxslider.min.js"></script>
+
+
+</body>
+</html>

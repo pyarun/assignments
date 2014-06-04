@@ -5,7 +5,11 @@
 .icon-2, .icon-3, .icon-4, .icon-5, .icon-6, 
 .arrow-left, .arrow-right, .apple, .google, .music-type, 
 .search
-{ display: block; background: url('png.png') no-repeat; }
+{display: inline-block;
+	background: url('../../IMG/icons.png?df8fa5e98d41') no-repeat;
+	overflow: hidden;
+	text-indent: -9999px;
+	text-align: left}
  
 .icons { background-position: -5px -0px; width: 329px; height: 52px; }
 .crown-big { background-position: -5px -57px; width: 115px; height: 90px; }
@@ -13,9 +17,9 @@
 .crown { background-position: -209px -57px; width: 78px; height: 59px; }
 .tickets { background-position: -125px -120px; width: 43px; height: 37px; }
 .tkts { background-position: -173px -121px; width: 43px; height: 37px; }
-.google { background-position: -221px -121px; width: 40px; height: 40px; }
-.insta { background-position: -266px -121px; width: 40px; height: 40px; }
-.youtube { background-position: -5px -152px; width: 40px; height: 40px; }
+.google { background-position: -40px -142px; width: 40px; height: 40px; }
+.insta { background-position: -80px -147px; width: 40px; height: 40px; }
+.youtube { background-position: -160px -148px; width: 40px; height: 40px; }
 .icon-1 { background-position: -292px -57px; width: 35px; height: 35px; }
 .icon-2 { background-position: -50px -152px; width: 35px; height: 35px; }
 .icon-3 { background-position: -90px -162px; width: 35px; height: 35px; }
@@ -27,4 +31,62 @@
 .apple { background-position: -292px -97px; width: 22px; height: 22px; }
 .google { background-position: -50px -192px; width: 22px; height: 22px; }
 .music-type { background-position: -5px -197px; width: 21px; height: 21px; }
-.search { background-position: -250px -202px; width: 20px; height: 20px; }
+.search {background-position: -267px -187px;; width: 20px; height: 20px; }
+
+
+#search-field {
+	border: solid #18bff2;
+	background: #dcf0f6
+}
+
+#search-field::-webkit-input-placeholder {
+	font-family: "Open Sans Light Italic";
+	font-size: 16;
+	color: #03a1d1
+}
+
+#search-field:-moz-placeholder {
+	font-family: "Open Sans Light Italic";
+	font-size: 16;
+	color: #03a1d1
+}
+
+#search-field::-moz-placeholder {
+	font-family: "Open Sans Light Italic";
+	font-size: 16;
+	color: #03a1d1
+}
+
+#search-field:-ms-input-placeholder {
+	font-family: "Open Sans Light Italic";
+	font-size: 16;
+	color: #03a1d1
+}
+
+#search-area .search {
+	top: 8px;
+	width: 30px;
+	height: 20px
+}
+
+.fb-like-box span {
+	height: 60px !important
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

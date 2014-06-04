@@ -3,8 +3,8 @@
 <head>
    <title>Bootstrap HIT n TRIAL</title>
    <!-- Bootstrap-->
-   <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-   <link href="../myLIB/myCSS/Style.css" rel="stylesheet">
+   <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+   <link href="../myLIB/myCSS/Style.css" rel="stylesheet" type="text/css">
    <style>
       .center{text-align: center}
       .border{border:1px solid black}
@@ -32,7 +32,7 @@
 </head>
 <body>
    <!--banner container -->
-   <header class="container-fluid border margin center">
+   <header class="container-fluid border center margin">
       <h1>Banner</h1>
    </header>
 
@@ -41,43 +41,113 @@
 
 
 
-      <div class="row border" style='padding: 20px;'>
-         <div class="col-md-3 border">
+      <div class="row">
+         <div class="col-lg-3 border">
             
-            <div class="row bckgnd-red">
-               <div class="col-md-12">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for a party...">
-                    <span class="input-group-addon">
-                       <span class="glyphicon glyphicon-search"></span>
-                    </span>
+            
+            
+            <!--search bar-->
+            <div class="row">
+               <div class="col-xs-12">
+                  <div class="form-group has-success has-feedback" id="search-area">
+                     <input class="form-control" type="text" placeholder="Search for a party..." id="search-field">
+                        <span class="glyphicon search form-control-feedback"></span>
                   </div>
                </div>
             </div>
-            <div class="row bckgnd-blue">
-               <div class="col-md-12">
+            
+            
+            
+            <!--user face bar-->
+            <div class="row">
+               <div class="col-xs-12">
                   <h4>Info Here</h4>
                </div>
             </div>
-            <div class="row bckgnd-red">
-               <div class="col-md-12">
+            
+
+
+
+            
+            
+            <!--calender area--> 
+            <div class="row">
+               <div class="col-xs-12">
                   <h4>Calendar here</h4>
+                  <div class="panel panel-default">
+                     <div class="panel-body"></div>
+                  </div>
                </div>
             </div>
-            <div class="row bckgnd-blue">
-               <div class="col-md-12">
-                  <img src="../IMG/ch-prts-icons.png" class="img-responsive">
+
+
+
+
+
+
+            
+            <!--Label Red-->
+            <div class="row">
+               <div class="col-xs-12">
+                  <img src="../IMG/ch-prts-icons.png" style="width: 109%">
                </div>
             </div>
-            <div class="row bckgnd-red">
-               <div class="col-md-12">
-                  <h4>My taste in Music is</h4>   
+            
+            
+            
+            <!--Music genre-->
+            <div class="row">
+               <div class="col-xs-12">
+                  <label>My taste in Music is</label>
+                  <div class="row">
+                     <div class="col-xs-6">
+                        <label class="checkbox-inline">
+                          <input type="checkbox" value=""><label>Pop</label>
+                        </label>
+                     </div>
+                     <div class="col-xs-6">
+                        <label class="checkbox-inline">
+                          <input type="checkbox" value=""><label>Rock</label>
+                        </label>
+                     </div>
+                     <div class="col-xs-6">
+                        <label class="checkbox-inline">
+                          <input type="checkbox" value=""><label>Electro</label>
+                        </label>
+                     </div>
+                     <div class="col-xs-6">
+                        <label class="checkbox-inline">
+                          <input type="checkbox" value=""><label>Hip-Hop</label>
+                        </label>
+                     </div>
+                     <div class="col-xs-6">
+                        <label class="checkbox-inline">
+                          <input type="checkbox" value=""><label>House</label>
+                        </label>
+                     </div>
+                     <div class="col-xs-6">
+                        <label class="checkbox-inline">
+                          <input type="checkbox" value=""><label>R&B</label>
+                        </label>
+                     </div>
+                     <div class="col-xs-6">
+                        <label class="checkbox-inline">
+                          <input type="checkbox" value=""><label>Dance</label>
+                        </label>
+                     </div>
+                  </div>   
                </div>
-               
             </div>
-            <div class="row bckgnd-blue">
-               <div class="col-md-12">
-                  <h4>What is User's Rating </h4>
+            
+            
+            
+            
+            
+            
+            <!-- user ratings -->
+            <div class="row">
+               <div class="col-xs-12">
+                  <label>What is User's Rating </label>
                   
                   <div class="checkbox">
                      <label><input type="checkbox" value="">
@@ -88,6 +158,7 @@
                         <span class="glyphicon glyphicon-star"></span>
                      </label>
                   </div>
+                  
                   <div class="checkbox">
                      <label><input type="checkbox" value="">
                         <span class="glyphicon glyphicon-star"></span>
@@ -96,6 +167,7 @@
                         <span class="glyphicon glyphicon-star"></span>
                      </label>
                   </div>
+                  
                   <div class="checkbox">
                      <label><input type="checkbox" value="">
                         <span class="glyphicon glyphicon-star"></span>
@@ -103,12 +175,14 @@
                         <span class="glyphicon glyphicon-star"></span>
                      </label>
                   </div>
+                  
                   <div class="checkbox">
                      <label><input type="checkbox" value="">
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="glyphicon glyphicon-star"></span>
                      </label>
                   </div>
+                  
                   <div class="checkbox">
                      <label><input type="checkbox" value="">
                         <span class="glyphicon glyphicon-star"></span>
@@ -117,19 +191,50 @@
                   
                </div>
             </div>
-            <div class="row bckgnd-red">
+            
+            
+            
+            <!-- google map -->
+            <div class="row">
                <div class="col-md-12">
                   <h4>map from google</h4>
                </div>
             </div>
-            <div class="row bckgnd-blue">
-               <div class="col-md-12">
-                  <h4>social web icons for fb....</h4>
-               </div>
+            
+            
+            
+            
+            <!-- social links-->
+            <div class="row">
+               <div class="col-xs-12">
+                     <div class="panel panel-default">
+                        <div class="panel-body">
+                           <div>
+                              <div class="fb-like-box" data-href="https://www.facebook.com/TLVScene"
+                                 data-width="141" data-height="60" data-show-faces="false"
+                                 data-header="false" data-stream="false" data-show-border="false">
+                              </div>
+                           </div>
+                           <div>
+                              <a target="_blank" href="http://followgram.me/tlvscene"><div class="insta pull-left"></div></a> 
+                              <a target="_blank" href="https://plus.google.com/116740026989254350496/posts"><div class="google pull-left"></div></a>
+                              <a target="_blank" href="http://www.youtube.com/channel/UC-ePkvMcC-v0tz0gd2-IW1Q"><div class="youtube pull-left"></div></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
             </div>
+
+
+
+
+
+
+
+
          </div>
 
-         <div class="col-md-8 border" style="margin-left: 50px;">
+         <div class="col-lg-9">
             <div class="row bckgnd-yellow ">
                <div class="col-md-12 center">
                   <h4>CHOOSE DAY OF THE WEEK comes here</h4>
