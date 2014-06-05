@@ -6,10 +6,19 @@
 .arrow-left, .arrow-right, .apple, .google, .music-type, 
 .search
 {display: inline-block;
-	background: url('../../IMG/icons.png?df8fa5e98d41') no-repeat;
+	background: url('../../IMG/icons.png') no-repeat;
 	overflow: hidden;
 	text-indent: -9999px;
 	text-align: left}
+.facebook-image {
+	background: url('../../IMG/facebook-icon.png')
+		no-repeat scroll 8px center #4B89DC;
+	border-radius: 0 6px 6px 0;
+	height: 45px;
+	margin-bottom: 0;
+	margin-top: -10px;
+	width: 40px
+}
  
 .icons { background-position: -5px -0px; width: 329px; height: 52px; }
 .crown-big { background-position: -5px -57px; width: 115px; height: 90px; }
@@ -29,7 +38,6 @@
 .arrow-left { background-position: -250px -166px; width: 31px; height: 31px; }
 .arrow-right { background-position: -286px -166px; width: 31px; height: 31px; }
 .apple { background-position: -292px -97px; width: 22px; height: 22px; }
-.google { background-position: -50px -192px; width: 22px; height: 22px; }
 .music-type { background-position: -5px -197px; width: 21px; height: 21px; }
 .search {background-position: -267px -187px;; width: 20px; height: 20px; }
 
@@ -69,14 +77,85 @@
 	height: 20px
 }
 
-.fb-like-box span {
+.fb-like-box {
 	height: 60px !important
 }
 
+body {
+	background-color: #F5F5F5
+}
 
+#nav-heading-txt {
+	background-color: #F5F5F5;
+	left: 24%;
+	margin: auto;
+	position: absolute;
+	top: 0%;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 0 5px
+}
 
+#weekdays-area .panel-body {
+	background-color: #F5F5F5
+}
 
+#weekdays-area .panel {
+	border: none;
+	box-shadow: none
+}
 
+#weekdays-area .panel-heading {
+	border: none
+}
+
+#weekdays-area .panel-body {
+	border-bottom-width: 3px;
+	border-top-width: 3px;
+	border-style: solid;
+	border-left: none;
+	border-right: none;
+	border-color: #DCDCDC
+}
+
+#days-nav-bar>li.active>a,#days-nav-bar>li.active>a:hover,#days-nav-bar>li.active>a:focus
+	{
+	background-color: #18bff2
+}
+
+#days-nav-bar>li>a {
+	padding: 5px 12px;
+	border-radius: 8px 8px 8px 8px
+}
+
+#days-nav-bar>li.active>a>span,#days-nav-bar>li.active>a:hover>span,#days-nav-bar>li.active>a:focus>span
+	{
+	color: #FFF
+}
+
+#days-nav-bar li {
+	text-transform: uppercase
+}
+
+#evnt-btn {
+	background-color: #5d9cec;
+	border: none;
+	height: 45px
+}
+
+#evnt-btn:hover {
+	background-color: #4B89DC
+}
+
+#get-taxi-btn {
+	background-color: #f9c138;
+	border: none;
+	height: 45px
+}
+
+#get-taxi-btn:hover {
+	background-color: #e7ac17
+}
 
 
 
