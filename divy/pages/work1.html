@@ -73,8 +73,6 @@
             
 
 
-
-            
             
             <!--calender area--> 
             <div class="row">
@@ -86,8 +84,6 @@
                      </div>
                   </div>
             </div>
-
-
 
 
 
@@ -154,8 +150,6 @@
                      
                </div>
             </div>
-            
-            
             
             
             
@@ -259,23 +253,19 @@
 
 
 
-
-
-
          </div>
 
          <div class="col-lg-9 border">
+            <!-- WEEK panel -->
             <div class="row">
-               <div class="col-md-12" id="weekdays-area">
+               <div class="col-xs-12" id="weekdays-area">
                   <div class="panel panel-default">
                      <div class="panel-heading">
                        <p class="text-center" style="color: blue;" id="nav-heading-txt">CHOOSE A DAY OF THE WEEK</p>
                      </div>
                      <div class="panel-body">
                        <ul class="nav nav-pills " id="days-nav-bar">
-                         <li class="text-center active" 
-                             ng-click="setActiveDate($event, day)" data-date="{{day|date:'M/d/yy'}}"
-                             ng-class="{active: day.getDate() == activeDate.getDate()}" ng-repeat="day in weekdays">
+                         <li class="text-center active"> 
                            <a href="">
                               <span class="day-txt text-black">MONDAY</span><br>
                               <span class="date-txt text-black">26 Jan</span>
@@ -287,290 +277,60 @@
                    </div>
                </div>
             </div>
-
-            <hr>
-
-            <div class="row" style="padding: 10px 10px 10px 0px; margin-bottom: 15px;">
-               <div class="col-md-2">
-                  <img src="../IMG/image.jpg" class="img-responsive">
-               </div>
-               <div class="col-md-10"> 
-                  <div class="row bckgnd-blue">
-	                  	<div class="col-md-6">
-	                  		<div class="row pull-left">
-								<label>SHPAGAT</label>
-	                  		</div>
-						</div>
-						<div class="col-md-2">
-							<div class="row">
-								<label>
-									<span class="glyphicon glyphicon-music"></span>
-									<span>Hits</span>
-	  							</label>
-							</div>
-						</div>
-          				<div class="col-md-4">
-          					<div class="row pull-right">
-								<span class="glyphicon glyphicon-star"></span>
-		                        <span class="glyphicon glyphicon-star"></span>
-		                        <span class="glyphicon glyphicon-star"></span>
-		                        <span class="glyphicon glyphicon-star"></span>
-		                        <span class="glyphicon glyphicon-star"></span>
-          					</div>
-          				</div>
-                  </div>
-                  <hr>
-                  <div class="row bckgnd-red">
-                     Warn and elegantly designed LGBT bar near Rothschild near Avant-garde 
-                     beats and intimate live shows.
-                  </div>
-               </div>
-            </div>
-
-            <div class="row" style="padding: 10px 10px 10px 0px;">
-               <div class="col-md-2">
-                   <img src="../IMG/image.jpg" class="img-responsive">
-               </div>
-               <div class="col-md-10">
-                  <div class="row bckgnd-blue">
-	                  	<div class="col-md-6">
-	                  		<div class="row pull-left">
-								<label>DRECK</label>
-	                  		</div>
-						</div>
-						<div class="col-md-2">
-							<div class="row">
-								<label>
-									<span class="glyphicon glyphicon-music"></span>
-									<span>Electro</span>
-	  							</label>
-							</div>
-						</div>
-          				<div class="col-md-4">
-          					<div class="row pull-right">
-								<span class="glyphicon glyphicon-star"></span>
-		                        <span class="glyphicon glyphicon-star"></span>
-		                        <span class="glyphicon glyphicon-star"></span>
-		                        <span class="glyphicon glyphicon-star"></span>
-		                        <span class="glyphicon glyphicon-star"></span>
-          					</div>
-          				</div>
-                  </div>
-                  <hr>
-                  <div class="row bckgnd-red">
-                     A sophisticated and hot electro pop party by Imri Kalman and Osher Sabag.
-                     Without a doubt the best way to celebrate the weekend with a beautiful crowd and cool beats.
-                  </div>
-               </div>
-            </div>
-               
-            <hr>
-			<div class="row" style="padding: 10px 0px 10px 0px;">
-            	<div class="col-md-3" style="border-right: 1px solid #eee; margin-right: 10px; padding-right: 20px">
-            		<div>
-            			<B>
-            				WHO IS COMING ?
-            			</B>
-            			<br>
-            			<small>
-            				483 People | 21 friends
-            			</small>
-            		</div>
-            		<div class="row">
-            			<div class="col-md-4">
-            				<img src="../IMG/image.jpg" alt="..." class="img-responsive img-rounded" style="margin: 5px 0px 5px 0px">
-            			</div>
-            			<div class="col-md-4">
-            				<img src="../IMG/image.jpg" alt="..." class="img-responsive img-rounded" style="margin: 5px 0px 5px 0px">
-            			</div>
-            			<div class="col-md-4">
-            				<img src="../IMG/image.jpg" alt="..." class="img-responsive img-rounded" style="margin: 5px 0px 5px 0px">
-            			</div>
-            		</div>
-            		<div class="row">
-            			<div class="col-md-4">
-            				<img src="../IMG/image.jpg" alt="..." class="img-responsive img-rounded" style="margin: 5px 0px 5px 0px">
-            			</div>
-            			<div class="col-md-4">
-            				<img src="../IMG/image.jpg" alt="..." class="img-responsive img-rounded" style="margin: 5px 0px 5px 0px">
-            			</div>
-            			<div class="col-md-4">
-            				<img src="../IMG/image.jpg" alt="..." class="img-responsive img-rounded" style="margin: 5px 0px 5px 0px">
-            			</div>
-            		</div>
-            		<div class="row">
-            			<div class="col-md-4">
-            				<img src="../IMG/image.jpg" alt="..." class="img-responsive img-rounded" style="margin: 5px 0px 5px 0px">
-            			</div>
-            			<div class="col-md-4">
-            				<img src="../IMG/image.jpg" alt="..." class="img-responsive img-rounded" style="margin: 5px 0px 5px 0px">
-            			</div>
-            			<div class="col-md-4">
-            				<img src="../IMG/image.jpg" alt="..." class="img-responsive img-rounded" style="margin: 5px 0px 5px 0px">
-            			</div>
-            		</div>
-            		<div class="row">
-            			<div class="col-md-4">
-            				<img src="../IMG/image.jpg" alt="..." class="img-responsive img-rounded" style="margin: 5px 0px 5px 0px">
-            			</div>
-            			<div class="col-md-4">
-            				<img src="../IMG/image.jpg" alt="..." class="img-responsive img-rounded" style="margin: 5px 0px 5px 0px">
-            			</div>
-            			<div class="col-md-4">
-            				<img src="../IMG/image.jpg" alt="..." class="img-responsive img-rounded" style="margin: 5px 0px 5px 0px">
-            			</div>
-            		</div>
-            		
-            		
-            		<div class="row">
-                      <div class="col-sm-12">
-                        <a id="evnt-btn" type="button" class="btn btn-primary btn-lg btn-block" target="" href=""> 
-                          <span> Event </span> 
-                          <div class="facebook-image pull-right"></div> 
-                        </a> 
-                      </div>
-                    </div>
-            	</div>
-               
-            	<div class="col-md-4" style="padding: 0px 15px 0px 15px;">
-            		<div class="row">
-            			BUY A TICKET AREA
-            		</div>
-                  	<hr>
-                  	<div class="row">
-                  		MAP AREA
-                  	</div>
-                  	<div class="btn-group" style="margin-top: 10px">
-                    	<button type="button" class="btn btn-primary btn-lg">
-                    		Get a Taxi
-                    	</button>
-                    	<div class="btn-group">
-                      		<button type="button" class="btn btn-primary btn-lg">
-                        	FB
-                      		</button>
-                     	</div>
-                  	</div>
-            	</div>
-            	<div class="col-md-4"  style="border-left: 1px solid #eee;">
-            	 	<table class="table table-condensed table-responsive">
-				            <tr>
-				               <td>image</td>
-				               <td>
-				               	<b>Door Open</b><br><small>10:30 PM, jan 11</small>
-				               </td>
-				            </tr>
-				            <tr>
-				               <td>image</td>
-				               <td>
-				               	<b>Zamir Club</b><br><small>Allenby 34, Tel Aviv</small>
-				               </td>
-				            </tr>
-				            <tr>
-				               <td>image</td>
-				               <td>
-				               	<b>Crowd</b><br><small>18+ Gay-friendly</small>
-				               </td>
-				            </tr>
-				            <tr>
-				               <td>image</td>
-				               <td>
-				               	<b>Price</b><br><small>60 NIS</small>
-				               </td>
-				            </tr>
-				            <tr>
-				               <td>image</td>
-				               <td>
-				               	<b>Live Show</b><br><small>Maya Buskila</small>
-				               </td>
-				            </tr>
-				            <tr>
-				               <td>image</td>
-				               <td>
-				               	<b>Drag Show</b><br><small>Talula Bonet</small>
-				               </td>
-				            </tr>
-				    </table>
-            		
-                  	<div class="btn-group">
-                    	<button type="button" class="btn btn-primary btn-lg">
-                    		Win a Drink
-                    	</button>
-                    	<div class="btn-group">
-                      		<button type="button" class="btn btn-primary btn-lg">
-                        	FB
-                      		</button>
-                     	</div>
-                  	</div>
-            	</div>
-            </div>
-
-            <hr>
-            <div><h5>MEDIA & PICTURES</h5></div>
-            <div id="myCarousel" class="carousel slide">
-               
-               <ol class="carousel-indicators">
-                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
-                  <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
-               </ol>   
-               
-               <div class="carousel-inner">
-                  <div class="item active">
-                     <img src="../IMG/image.jpg" alt="First slide">
-                  </div>
-                  <div class="item">
-                     <img src="../IMG/image.jpg" alt="Second slide">
-                  </div>
-                  <div class="item">
-                     <img src="../IMG/image.jpg" alt="Third slide">
-                  </div>
-               </div>
-              
-               <a class="carousel-control left" href="#myCarousel" 
-                  data-slide="prev">&lsaquo;</a>
-               <a class="carousel-control right" href="#myCarousel" 
-                  data-slide="next">&rsaquo;</a>
-            </div>               
-            <hr>
             
-            <div class="row" style="padding: 10px 10px 10px 0px; margin-bottom: 15px;">
-               <div class="col-md-2">
-                  <img src="../IMG/image.jpg" class="img-responsive">
-               </div>
-               <div class="col-md-10"> 
-                  <div class="row bckgnd-blue">
-	                  	<div class="col-md-6">
-	                  		<div class="row pull-left">
-								<label>GLITTER</label>
-	                  		</div>
-						</div>
-						<div class="col-md-2">
-							<div class="row">
-								<label>
-									<span class="glyphicon glyphicon-music"></span>
-									<span>Pop</span>
-	  							</label>
-							</div>
-						</div>
-          				<div class="col-md-4">
-          					<div class="row pull-right">
-								<span class="glyphicon glyphicon-star"></span>
-		                        <span class="glyphicon glyphicon-star"></span>
-		                        <span class="glyphicon glyphicon-star"></span>
-		                        <span class="glyphicon glyphicon-star"></span>
-		                        <span class="glyphicon glyphicon-star"></span>
-          					</div>
-          				</div>
-                  </div>
-                  <hr>
-                  <div class="row bckgnd-red">
-                     Every Saturday at the Evita Bar, starring drag queen Zona Pariot, with happy <br>
-                     music! Producer Daniel Kazengold will make sure you'll never forget it, with <br>
-                     lots of fun an special treats!
+            <div class="row">
+               <div class="col-xs-12" id="party-list-area">
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <span class="text-blue" id="title-txt"> Friday 6 Jun </span>
+                     </div>
+                     
+                     <div class="panel-body">
+                        <div class="panel panel-default">
+                           <div class="panel-body">
+                              <div class="row">
+                                 <div class="col-xs-2">
+                                    <div>
+                                       <img src="holder.js/100x100/vine/text:SHPAGAT">
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="col-xs-10">
+                                    <div class="row">
+                                       <div class="col-xs-5 border">
+                                          <span><label>SHPAGAT</label></span>
+                                       </div>
+                                       <div class="col-xs-2 border">
+                                          <span class="pull-left music-type"></span>
+                                          <span class="pull-left"> House </span>
+                                       </div>
+                                       <div class="col-xs-3 border">
+                                          <ul class="list-inline pull-right">
+                                            <li class="lgblueborderstar"></li>
+                                            <li class="lgblueborderstar"></li>
+                                            <li class="lgblueborderstar"></li>
+                                            <li class="lgblueborderstar"></li>
+                                            <li class="lgblueborderstar"></li>
+                                          </ul>
+                                       </div>
+                                       <div class="col-xs-2 border">
+                                          <span class="pull-right tickets"></span>
+                                       </div>
+                                    </div>
+                                    <div class="hr1"></div>
+                                    <div class="row">
+                                       <div class="col-xs-12">
+                                          <span>Warn and elegantly designed LGBT bar near Rothschild near Avant-garde beats and intimate live shows.</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
-
          </div>
       </div>
       
