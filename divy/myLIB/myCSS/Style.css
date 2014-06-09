@@ -18,6 +18,21 @@
 	margin-top: -10px;
 	width: 40px
 }
+.taxi-image {
+	background: url('../../IMG/Get-a-taxi.png') no-repeat scroll 0 5px #e7ac17;
+	border-radius: 0 6px 6px 0;
+	height: 45px;
+	margin-top: -10px;
+	width: 40px
+}
+.drink-image {
+	background: url('../../IMG/drink.png') no-repeat scroll 5px 8px #dc3547;
+	border-radius: 0 6px 6px 0;
+	height: 45px;
+	margin-bottom: 0;
+	margin-top: -5px;
+	width: 40px
+}
  
 .icons { background-position: -5px -0px; width: 329px; height: 52px; }
 .crown-big { background-position: -5px -57px; width: 115px; height: 90px; }
@@ -28,12 +43,12 @@
 .google { background-position: -40px -142px; width: 40px; height: 40px; }
 .insta { background-position: -80px -147px; width: 40px; height: 40px; }
 .youtube { background-position: -160px -148px; width: 40px; height: 40px; }
-.icon-1 { background-position: -292px -57px; width: 35px; height: 35px; }
-.icon-2 { background-position: -50px -152px; width: 35px; height: 35px; }
-.icon-3 { background-position: -90px -162px; width: 35px; height: 35px; }
-.icon-4 { background-position: -130px -162px; width: 35px; height: 35px; }
-.icon-5 { background-position: -170px -163px; width: 35px; height: 35px; }
-.icon-6 { background-position: -210px -166px; width: 35px; height: 35px; }
+.icon-1 { background-position: -201px -151px; width: 35px; height: 35px; }
+.icon-2 { background-position: -236px -151px; width: 35px; height: 35px; }
+.icon-3 { background-position: -270px -151px; width: 35px; height: 35px; }
+.icon-4 { background-position: 0px -182px; width: 35px; height: 35px; }
+.icon-5 { background-position: -35px -182px; width: 35px; height: 35px; }
+.icon-6 { background-position: -197px -186px; width: 35px; height: 35px; }
 .arrow-left { background-position: -250px -166px; width: 31px; height: 31px; }
 .arrow-right { background-position: -286px -166px; width: 31px; height: 31px; }
 .apple { background-position: -292px -97px; width: 22px; height: 22px; }
@@ -173,6 +188,25 @@ body {
 	background-color: #e7ac17
 }
 
+.win-drnk-btn {
+	background-color: #ed5565;
+	border: none;
+	height: 45px;
+	padding: 5px 0
+}
+
+.win-drnk-btn:hover {
+	background-color: #dc3547
+}
+
+.win-drnk-btn .sm-tit {
+	font-size: 12px
+}
+
+.win-drnk-btn .sub-tit {
+	font-size: 14px
+}
+
 #title-txt {
 	font-size: 25px;
 	font-weight: bold
@@ -248,8 +282,26 @@ body {
 	border: 0;
 	border-top: 1px solid #eee
 }
+.loading-img {
+	height: 25px;
+	width: 30px
+}
+.pdwrap {
+	height: 480px
+}
+.pdwrapsub {
+	height: 100%;
+	margin-bottom: -46px
+}
+.list-group-item{
+	border: 0px
+}
 
-
+.badge {
+  line-height: 3;
+  background-color: #47D147;
+  border-radius: 22px;
+}
 
 
 
